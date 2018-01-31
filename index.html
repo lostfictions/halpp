@@ -6,9 +6,33 @@
         <title>savage</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                height: 100vh;
+            }
+            .container {
+                width: 60vmin;
+                height: 60vmin;
+            }
+            .overlay {
+                z-index: 100;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
     </head>
     <body>
-        <script src="emojilist.js"></script>
+        <div class="overlay" onclick="location.reload()"></div>
+        <div class="container"></div>
+        <script src="https://cdn.rawgit.com/adobe-webplatform/Snap.svg/master/dist/snap.svg.js"></script>
+        <script src="emojilist-gen.js"></script>
         <script src="dork.js"></script>
     </body>
 </html>
